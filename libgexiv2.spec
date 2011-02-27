@@ -13,7 +13,7 @@ Patch1:		libgexiv2-0.2.1-link.patch
 Url:		http://trac.yorba.org/wiki/gexiv2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libexiv-devel >= 0.21
-BuildRequires:	libglib2.0-devel
+BuildRequires:	glib2-devel
 BuildRequires:	libtool
 BuildRequires:	sed
 
