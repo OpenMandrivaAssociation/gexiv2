@@ -1,10 +1,10 @@
 %define major 0
-%define libname %mklibname gexiv2_ %major
+%define libname %mklibname gexiv2_ %{major}
 %define develname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
-Version:	0.3.0
+Version:	0.3.1
 Release:	%mkrel 2
 License:	GPLv2+
 Group:		Graphics
@@ -21,21 +21,22 @@ BuildRequires:	sed
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
 the basic features of Exiv2 available to GNOME applications.
 
-%package -n %libname
+%package -n %{libname}
 Summary: A GObject-based wrapper around the Exiv2 library
 Group: Graphics
 
-%description -n %libname
+%description -n %{libname}
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
 the basic features of Exiv2 available to GNOME applications.
 
-%package -n %develname
+%package -n %{develname}
 Group: Development/C
 Summary: A GObject-based wrapper around the Exiv2 library
-Requires: %libname = %version-%release
-Provides: %name-devel = %version-%release
+Requires:	%{libname} = %{version}-%{release}
+Requires:	libexiv-devel >= 0.21
+Provides:	%{name}-devel = %{version}-%{release}
 
-%description -n %develname
+%description -n %{develname}
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
 the basic features of Exiv2 available to GNOME applications.
 
@@ -49,19 +50,19 @@ sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 %make
 
 %install
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf %{buildroot}
 %makeinstall_std LIB=%{_lib}
 
 %find_lang %{name}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
-%files -n %libname
+%files -n %{libname}
 %defattr(-,root,root)
 %{_libdir}/*.so.%{major}*
 
-%files -n %develname
+%files -n %{develname}
 %defattr(-,root,root)
 %{_includedir}/gexiv2
 %{_libdir}/*.so
