@@ -5,7 +5,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
 Version:	0.3.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Graphics
 Source0:	http://yorba.org/download/gexiv2/0.3/%{name}-%{version}.tar.bz2
@@ -46,7 +46,7 @@ the basic features of Exiv2 available to GNOME applications.
 sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 
 %build
-%configure2_5x LIB=%{_lib}
+./configure --prefix=%{prefix} LIB=%{_lib}
 %make
 
 %install
