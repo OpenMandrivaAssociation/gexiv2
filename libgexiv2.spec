@@ -5,7 +5,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
 Version:	0.3.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPLv2+
 Group:		Graphics
 Source0:	http://yorba.org/download/gexiv2/0.3/%{name}-%{version}.tar.bz2
