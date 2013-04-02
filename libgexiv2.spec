@@ -42,7 +42,7 @@ the basic features of Exiv2 available to GNOME applications.
 
 %prep
 %setup -q -n %{name}-%{version}
-%patch0 -p0
+%patch0 -p1
 sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 
 %build
