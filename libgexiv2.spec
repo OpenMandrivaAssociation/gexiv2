@@ -1,4 +1,4 @@
-%define major 0
+%define major 2
 %define libname %mklibname gexiv2_ %major
 %define develname %mklibname -d gexiv2
 
