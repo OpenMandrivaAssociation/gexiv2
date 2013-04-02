@@ -14,7 +14,7 @@ BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	libtool
 BuildRequires:	sed
-Patch0:		libgexiv2-0.2.1-link.patch
+Patch0:		libgexiv2-0.6.1-link.patch
 
 %description
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
