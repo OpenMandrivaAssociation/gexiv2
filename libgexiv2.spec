@@ -1,6 +1,7 @@
 %define major 2
 %define libname %mklibname gexiv2_ %major
 %define develname %mklibname -d gexiv2
+%define api 0.4
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
@@ -8,7 +9,7 @@ Version:	0.6.1
 Release:	1
 License:	GPLv2+
 Group:		Graphics
-Source0:	http://yorba.org/download/gexiv2/0.3/%{name}-%{version}.tar.xz
+Source0:	http://yorba.org/download/gexiv2/0.6/%{name}-%{version}.tar.xz
 Url:		http://trac.yorba.org/wiki/gexiv2
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -55,12 +56,14 @@ sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
+%{_libdir}/girepository-1.0/GExiv2-%{api}.typelib
 
 %files -n %{develname}
 %{_includedir}/gexiv2
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/gexiv2.vapi
+%{_datadir}/gir-1.0/GExiv2-%{api}.gir
 
 %changelog
 * Tue May 08 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.3.92-1
