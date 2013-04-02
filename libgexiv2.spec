@@ -14,6 +14,7 @@ BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	libtool
 BuildRequires:	sed
+BuildRequires:  girepository-devel
 Patch0:		libgexiv2-0.6.1-link.patch
 
 %description
