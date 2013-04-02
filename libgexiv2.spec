@@ -8,7 +8,7 @@ Version:	0.6.1
 Release:	1
 License:	GPLv2+
 Group:		Graphics
-Source0:	http://yorba.org/download/gexiv2/0.3/%{name}-%{version}.tar.bz2
+Source0:	http://yorba.org/download/gexiv2/0.3/%{name}-%{version}.tar.xz
 Url:		http://trac.yorba.org/wiki/gexiv2
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
