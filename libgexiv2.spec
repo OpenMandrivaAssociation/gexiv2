@@ -1,7 +1,7 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api	0.4
-%define major	2
+%define api 0.4
+%define major 2
 %define libname %mklibname gexiv2_ %{major}
 %define girname %mklibname gexiv2-gir %{api}
 %define devname %mklibname -d gexiv2
@@ -9,7 +9,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
 Version:	0.6.1
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		Graphics
 Url:		http://trac.yorba.org/wiki/gexiv2
@@ -20,7 +20,7 @@ BuildRequires:	libtool
 BuildRequires:	sed
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:  pkgconfig(gobject-introspection-1.0)
+BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 %description
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
@@ -63,6 +63,7 @@ sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 	--release \
 	--enable-introspection \
 	--prefix=%{_prefix}
+
 %make
 
 %install
