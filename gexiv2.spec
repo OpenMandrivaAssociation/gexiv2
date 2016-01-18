@@ -7,7 +7,7 @@
 %define devname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
-Name:		libgexiv2
+Name:		gexiv2
 Version:	0.10.3
 Release:	1
 License:	GPLv2+
@@ -43,9 +43,10 @@ GObject Introspection interface description for %{name}.
 %package -n %{devname}
 Group:		Development/C
 Summary:	A GObject-based wrapper around the Exiv2 library
-Requires:	%{libname} = %{version}-%{release}
-Requires:	%{girname} = %{version}-%{release}
-Provides:	%{name}-devel = %{version}-%{release}
+Requires:	%{libname} = %{EVRD}
+Requires:	%{girname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
+Provides:	lib%{name}-devel = %{EVRD}
 Obsoletes:	%{mklibname -d -s gexiv2} < 0.3.92-2
 
 %description -n %{devname}
