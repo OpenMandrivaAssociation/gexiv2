@@ -1,9 +1,9 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define api 0.4
+%define gir_major 0.10
 %define major 2
 %define libname %mklibname gexiv2_ %{major}
-%define girname %mklibname gexiv2-gir %{api}
+%define girname %mklibname gexiv2-gir %{git_major}
 %define devname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
@@ -55,29 +55,26 @@ This package contains the development files for %{name}.
 %prep
 %setup -q
 %apply_patches
-sed -i -e 's#libdir=.*#libdir=${exec_prefix}/%{_lib}#' gexiv2.m4
 
 %build
-./configure \
-	--release \
-	--enable-introspection \
-	--prefix=%{_prefix}
+%configure \
+	--enable-introspection
 
 %make
 
 %install
-%makeinstall_std LIB=%{_lib}
+%makeinstall_std
 
 %files -n %{libname}
 %{_libdir}/libgexiv2.so.%{major}*
 
 %files -n %{girname}
-%{_libdir}/girepository-1.0/GExiv2-%{api}.typelib
+%{_libdir}/girepository-1.0/*-%{gir_major}.typelib
 
 %files -n %{devname}
 %{_includedir}/gexiv2
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/gexiv2.vapi
-%{_datadir}/gir-1.0/GExiv2-%{api}.gir
+%{_datadir}/gir-1.0/*-%{gir_major}.gir
 
