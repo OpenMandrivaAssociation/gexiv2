@@ -3,7 +3,7 @@
 %define gir_major 0.10
 %define major 2
 %define libname %mklibname gexiv2_ %{major}
-%define girname %mklibname gexiv2-gir %{git_major}
+%define girname %mklibname gexiv2-gir %{gir_major}
 %define devname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
