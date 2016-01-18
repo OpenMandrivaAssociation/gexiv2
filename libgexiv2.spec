@@ -8,14 +8,12 @@
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		libgexiv2
-Version:	0.6.1
-Release:	11
+Version:	0.10.3
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		http://trac.yorba.org/wiki/gexiv2
 Source0:	http://yorba.org/download/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		libgexiv2-0.6.1-link.patch
-
 BuildRequires:	libtool
 BuildRequires:	sed
 BuildRequires:	pkgconfig(exiv2)
