@@ -75,6 +75,6 @@ This package contains the development files for %{name}.
 %{_includedir}/gexiv2
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-%{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
+%{_datadir}/gtk-doc/html/%{name}
 
