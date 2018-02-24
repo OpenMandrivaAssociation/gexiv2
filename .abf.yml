@@ -1,2 +1,4 @@
+removed_sources:
+  gexiv2-0.10.3.tar.xz: 30d03c25d22d0e4b016377b1250f6a3cc3bf3e99
 sources:
-  "gexiv2-0.10.3.tar.xz": 30d03c25d22d0e4b016377b1250f6a3cc3bf3e99
+  gexiv2-0.10.8.tar.xz: 8caafc5557a9acda3fcc023ee0e55d342b167cff
