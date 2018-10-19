@@ -9,7 +9,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
 Version:	0.10.8
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
@@ -19,6 +19,7 @@ BuildRequires:	sed
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
+BuildRequires:	pkgconfig(vapigen)
 
 %description
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
@@ -77,4 +78,5 @@ This package contains the development files for %{name}.
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
 %{_datadir}/gtk-doc/html/%{name}
+%{_datadir}/vala/vapi/gexiv2.vapi
 
