@@ -14,6 +14,8 @@ License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
 Source0:	https://download.gnome.org/sources/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
+BuildRequires:  gtk-doc
+BuildRequires:  meson
 BuildRequires:	libtool
 BuildRequires:	sed
 BuildRequires:	pkgconfig(exiv2)
@@ -58,13 +60,11 @@ This package contains the development files for %{name}.
 %apply_patches
 
 %build
-%configure \
-	--enable-introspection
-
-%make
+%meson -Denable-gtk-doc=true
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %files -n %{libname}
 %{_libdir}/libgexiv2.so.%{major}*
