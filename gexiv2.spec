@@ -9,11 +9,12 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
 Version:	0.10.9
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
 Source0:	https://download.gnome.org/sources/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		gexiv2-0.10.9-exiv2-0.27.patch
 BuildRequires:  gtk-doc
 BuildRequires:  meson
 BuildRequires:	libtool
@@ -56,8 +57,7 @@ Obsoletes:	%{mklibname -d -s gexiv2} < 0.3.92-2
 This package contains the development files for %{name}.
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 
 %build
 %meson -Denable-gtk-doc=true
@@ -80,4 +80,5 @@ This package contains the development files for %{name}.
 %{_datadir}/gtk-doc/html/%{name}
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
-
+%{_libdir}/python3.7/site-packages/gi/overrides/GExiv2.py
+%{_libdir}/python3.7/site-packages/gi/overrides/__pycache__/*
