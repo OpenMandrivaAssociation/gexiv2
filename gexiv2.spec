@@ -23,6 +23,8 @@ BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(vapigen)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python-gi
 
 %description
 gexiv2 is a GObject-based wrapper around the Exiv2 library. It makes
