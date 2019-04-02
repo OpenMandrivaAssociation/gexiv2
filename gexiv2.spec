@@ -14,7 +14,6 @@ License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
 Source0:	https://download.gnome.org/sources/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
-#Patch0:		gexiv2-0.10.9-exiv2-0.27.patch
 BuildRequires:  gtk-doc
 BuildRequires:  meson
 BuildRequires:	libtool
