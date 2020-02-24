@@ -9,7 +9,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
 Version:	0.12.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
@@ -81,5 +81,5 @@ This package contains the development files for %{name}.
 #{_datadir}/gtk-doc/html/%{name}
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
-%{_libdir}/python3.7/site-packages/gi/overrides/GExiv2.py
-%{_libdir}/python3.7/site-packages/gi/overrides/__pycache__/*
+%{_libdir}/python3*/site-packages/gi/overrides/GExiv2.py
+%{_libdir}/python3*/site-packages/gi/overrides/__pycache__/*
