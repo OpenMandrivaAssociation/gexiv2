@@ -8,8 +8,8 @@
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
-Version:	0.12.0
-Release:	3
+Version:	0.12.1
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
