@@ -74,11 +74,11 @@ This package contains the development files for %{name}.
 %{_libdir}/girepository-1.0/*-%{gir_major}.typelib
 
 %files -n %{devname}
+%doc %{_datadir}/gtk-doc/
 %{_includedir}/gexiv2
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
-#{_datadir}/gtk-doc/html/%{name}
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
 %{_libdir}/python3*/site-packages/gi/overrides/GExiv2.py
