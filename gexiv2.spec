@@ -9,7 +9,7 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
 Version:	0.14.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
@@ -61,7 +61,7 @@ This package contains the development files for %{name}.
 %autosetup -p1
 
 %build
-%meson -Denable-gtk-doc=true
+%meson -Dgtk_doc=true
 %meson_build
 
 %install
