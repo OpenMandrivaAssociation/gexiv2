@@ -8,8 +8,8 @@
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
-Version:	0.14.0
-Release:	6
+Version:	0.14.1
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
@@ -81,4 +81,4 @@ This package contains the development files for %{name}.
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
-%{_libdir}/python3*/site-packages/gi/overrides/GExiv2.py
+%{python_sitelib}/gi/overrides/GExiv2.py
