@@ -81,4 +81,4 @@ This package contains the development files for %{name}.
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
-#{_libdir}/python3*/site-packages/gi/overrides/GExiv2.py
+%{python_sitelib}/gi/overrides/GExiv2.py
