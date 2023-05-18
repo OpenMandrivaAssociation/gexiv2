@@ -9,11 +9,12 @@
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
 Version:	0.14.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
 Source0:	https://download.gnome.org/sources/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		gexiv2-0.14.1-exiv2-0.28.patch
 BuildRequires:  gtk-doc
 BuildRequires:  meson
 BuildRequires:	libtool
