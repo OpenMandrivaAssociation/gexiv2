@@ -83,3 +83,4 @@ This package contains the development files for %{name}.
 %{_datadir}/vala/vapi/gexiv2.vapi
 %{_datadir}/vala/vapi/gexiv2.deps
 %{python_sitelib}/gi/overrides/GExiv2.py
+%{python_sitelib}/gi/overrides/__pycache__/GExiv2.cpython-*.pyc
