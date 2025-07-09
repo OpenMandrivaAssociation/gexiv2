@@ -8,7 +8,7 @@
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
-Version:	0.14.5
+Version:	0.14.6
 Release:	1
 License:	GPLv2+
 Group:		Graphics
