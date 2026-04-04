@@ -1,23 +1,22 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define gir_major 0.10
-%define major 2
+%define gir_major 0.16
+%define major 4
 %define libname %mklibname gexiv2_ %{major}
 %define girname %mklibname gexiv2-gir %{gir_major}
 %define devname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
-Version:	0.14.6
-Release:	4
+Version:	0.16.0
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
 Source0:	https://download.gnome.org/sources/gexiv2/%{url_ver}/%{name}-%{version}.tar.xz
 
-BuildRequires:  gtk-doc
+BuildRequires:  gi-docgen
 BuildRequires:  meson
-BuildRequires:	libtool
 BuildRequires:	sed
 BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -69,18 +68,18 @@ This package contains the development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/libgexiv2.so.%{major}*
+%{_libdir}/libgexiv2-%{gir_major}.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/*-%{gir_major}.typelib
 
 %files -n %{devname}
-%doc %{_datadir}/gtk-doc/
-%{_includedir}/gexiv2
+%doc %{_datadir}/doc/gexiv2-%{gir_major}/
+%{_includedir}/gexiv2-%{gir_major}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gir-1.0/*-%{gir_major}.gir
-%{_datadir}/vala/vapi/gexiv2.vapi
-%{_datadir}/vala/vapi/gexiv2.deps
+%{_datadir}/vala/vapi/gexiv2-%{gir_major}.vapi
+%{_datadir}/vala/vapi/gexiv2-%{gir_major}.deps
 %{python_sitelib}/gi/overrides/GExiv2.py
 %{python_sitelib}/gi/overrides/__pycache__/GExiv2.cpython-*.pyc
