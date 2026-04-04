@@ -68,7 +68,7 @@ This package contains the development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/libgexiv2.so.%{major}*
+%{_libdir}/libgexiv2-%{gir_major}.so.%{major}*
 
 %files -n %{girname}
 %{_libdir}/girepository-1.0/*-%{gir_major}.typelib
