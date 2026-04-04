@@ -1,15 +1,15 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define gir_major 0.10
-%define major 2
+%define gir_major 0.16
+%define major 4
 %define libname %mklibname gexiv2_ %{major}
 %define girname %mklibname gexiv2-gir %{gir_major}
 %define devname %mklibname -d gexiv2
 
 Summary:	A GObject-based wrapper around the Exiv2 library
 Name:		gexiv2
-Version:	0.14.6
-Release:	4
+Version:	0.16.0
+Release:	1
 License:	GPLv2+
 Group:		Graphics
 Url:		https://wiki.gnome.org/Projects/gexiv2
